@@ -1,18 +1,28 @@
 /* GERAL */
 * {
     box-sizing: border-box;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
     background-color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.texto-maiusculo {
+    text-transform: uppercase;
 }
 
 h1 {
     padding: 0;
     margin: 0;
+}
+
+.container {
+    max-width: 1024px;
+    display: flex;
+    justify-content: center;
 }
 
 /* TOPO */
@@ -23,7 +33,6 @@ h1 {
     width: 100%;
 }
 
-/* teste */
 .conteudo-topo {
     display: flex;
     justify-content: space-between;
@@ -66,5 +75,16 @@ h1 {
     background-repeat: no-repeat;
     height: 500px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner div {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
 }
 
