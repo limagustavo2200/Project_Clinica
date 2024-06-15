@@ -10,22 +10,35 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+main{
+    color: #0000008c;
+    margin-bottom: 60px;
+}
+
 .texto-maiusculo {
     text-transform: uppercase;
 }
 
-h1 {
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 5px 15px;
+}
+
+.container-titulo {
+    max-width: 600px;
+    text-align: center; 
+    margin: 80px auto 0 auto;
+}
+
+h1, h2, h3{
     padding: 0;
     margin: 0;
 }
 
-.container {
-    max-width: 1024px;
-    display: flex;
-    justify-content: center;
-}
-
 /* TOPO */
+
+
 .topo {
     background-color: #00cad1;
     display: flex;
@@ -68,23 +81,207 @@ h1 {
 }
 
 /* CONTEUDO */
+
 .banner {
+    position: relative;
     background-image: url('/assets/recepcao.png');
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center; 
     height: 500px;
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
-.banner div {
-    width: 100%;
+.banner-texto {
+    /* width: 100%;
     height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    color: white;
+    justify-content: center; */
+    color: #fff;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
+.banner-texto h1 {
+    font-weight: 500;
+    font-size: 38px;
+    margin: 0;
+}
+
+/* SOBRE A CLINICA */
+
+.sobre_titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre_conteudo {
+    display: flex;
+    justify-content: center;
+}
+
+.sobre_conteudo h3 {
+    font-weight: 500;
+}
+
+/* ESPECIALISTAS */
+
+.especialidades_conteudo {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    border-radius: 5px;
+    margin: 10px;
+    width: calc(100% / 3 - 40px);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+figure img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+figcaption {
+    text-align: center;
+    padding: 10px;
+}
+
+.horarios {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.horarios a {
+    background-color: #00cad1;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+/* CONTATOS */
+
+.contatos-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contatos-titulo span {
+    font-weight: bold;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #0c6e71;
+    margin-top: 40px;
+}
+
+.rodape {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+.rodape img {
+    height: 60px;
+    width: 85px;
+}
+
+/* RESPOSIVO COM MEDIA QUERIES */
+
+@media (width <= 425px) {
+    .conteudo-topo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10px;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .links-topo {
+        justify-content: space-around;
+        border-top: 1px solid #02acb3;
+        padding-top: 12px;
+        width: 100%;
+    }
+
+    .banner {
+        height: 200px;
+    }
+
+    .banner h1 {
+        font-size: 26px;
+    }
+
+    .sobre_conteudo img {
+        display: none;
+    }
+
+    .sobre_conteudo h3{
+        align-items: center;
+        text-align: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+
+@media (width > 425px) and (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+
+    .sobre_conteudo h3{
+        align-items: center;
+        text-align: center;
+    }
+
+    .sobre_conteudo img {
+        display: none;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+
+    .card {
+        width: calc(100% / 2 - 40px);
+    }
+}
+
+@media (width > 768px) and (max-width: 1024px){
+    .banner {
+        height: 400px;
+    }
+}
