@@ -1,0 +1,21 @@
+.intro-especialidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    gap: 30px;
+}
+
+.intro-especialidades nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.intro-especialidades a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #0000008c;
+    border-bottom: 2px solid #00cad1;
+
+}
