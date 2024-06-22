@@ -74,7 +74,14 @@
     .escala {
         padding: 0;
     }
+
+    .container {
+        padding: 0;
+    }
     
+    .intro-especialidades {
+        padding: 35px 15px;
+    }
 }
 
 @media (max-width: 768px) {
