@@ -169,6 +169,7 @@ figcaption {
 .horarios a {
     background-color: #00cad1;
     color: #fff;
+    text-align: center;
     text-decoration: none;
     padding: 10px 20px;
     font-weight: 600;
